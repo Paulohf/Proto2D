@@ -8,3 +8,5 @@ https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator >>
 https://jeevo.itch.io/dungeoneering-eq-icon-pack >>> Icons
 
 https://limezu.itch.io/moderninteriors >>> Tileset
+
+Day 1: Added assets that will be used on the project
