@@ -40,6 +40,7 @@ public class Actor_Trigger : MonoBehaviour
 		switch (behavior)
 		{
 			case Behavior.Shop:
+				shop.shopInteracting = true;
 				shop.ActorBehavior();
 				break;
 			case Behavior.Event:

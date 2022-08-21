@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player_Control : MonoBehaviour
 {
+    public GameObject clothes;
+
     public float speed; //Player Speed
     public Animator[] anim; //Array of Animator, to sync the animations of the Character and Clothes
     Rigidbody2D rb;
@@ -117,6 +119,10 @@ public class Player_Control : MonoBehaviour
 		if (direction == at.direction)
 		{
             canInteract = true;
+        }
+		else
+		{
+            canInteract = false;
         }
     }
 }

@@ -10,4 +10,8 @@ public class Shop_Canvas : MonoBehaviour
 	public GameObject sellButton;
 	public GameObject exitButton;
 	public GameObject sellingPanel;
+
+	public GameObject buttonTemplate;
+
+	public GameObject sellButtonTemplate;
 }

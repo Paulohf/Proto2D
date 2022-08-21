@@ -20,3 +20,6 @@ Day 2:
 Day 3: 
 - Basic event system
 - Shop menu system (Buy and Sell not working yet)
+
+Day 4: 
+- Sell system working with a bug where for some reason Destroy child don't destroy if the function is inside de "Return" Key
