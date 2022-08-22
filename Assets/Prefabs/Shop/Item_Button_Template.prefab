@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 8712219054097428200}
   - component: {fileID: 9181652460305654412}
   m_Layer: 5
-  m_Name: Sell_Item_Button
-  m_TagString: Sell_Panel
+  m_Name: Item_Button_Template
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

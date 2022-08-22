@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sell_Panel
+  - Shirt
+  - Leg
+  - Boot
   layers:
   - Default
   - TransparentFX

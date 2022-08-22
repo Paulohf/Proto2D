@@ -209,11 +209,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8660c17b9e104534c840c9bff32c8c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  pcScript: {fileID: 0}
+  playerItems: []
   shopInteracting: 0
   maincanvas: {fileID: 9020820863226762161, guid: 232bddc2d5e2fca4a812f702a6899e13, type: 3}
+  scScript: {fileID: 0}
   pressTime: 0
   options: 0
-  panel: 0
+  activePanel: 0
+  firstPanel: {fileID: 0}
+  secondPanel: {fileID: 0}
+  itemList: []
 --- !u!1 &285754601
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +344,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothes: {fileID: 778963486}
+  shirt: 1
+  leg: 1
+  boots: 1
   speed: 10
   anim:
   - {fileID: 285754604}
@@ -354,7 +364,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.055}
+  m_Offset: {x: 0, y: -0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

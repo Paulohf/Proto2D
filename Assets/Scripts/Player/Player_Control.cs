@@ -1,21 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Control : MonoBehaviour
 {
-    public GameObject clothes;
+    public GameObject clothes; // GameObject that holds all items
+    public bool shirt = true; //if the player is wearing a shirt
+    public bool leg = true; //if the player is wearing a leg
+    public bool boots = true; //if the player is wearing a boot
 
     public float speed; //Player Speed
     public Animator[] anim; //Array of Animator, to sync the animations of the Character and Clothes
-    Rigidbody2D rb;
+    Rigidbody2D rb; //player RigidBody
 
-    bool[] blockInt = new bool[4]; //Array of Block to prevent the script to send unecessary commands
+    bool[] blockInt = new bool[4]; //Array of boolean to prevent the script to send unecessary commands
     bool blockIdle; //Same as above, but for Idle
     public static bool interacting; //if the player is talking/checking/interacting with a NPC or Event, this is to disable player movement
     bool canInteract; //if the player is in a trigger that he can intereact (If all criteria met)
 
-    Actor_Trigger at;
+    Actor_Trigger at;//Shop/NPC/Event trigger, to check if the player is able to enter a event
 
     public enum Direction //Where the Player is facing, to check if he's in the same direction of a NPC
     {
@@ -29,7 +30,7 @@ public class Player_Control : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //Get Rigidbody from player
-        anim = GetComponentsInChildren<Animator>(); //Get clothes Animator from player
+        UpdateAnimator(); //Get clothes Animator from player
     }
 
 	private void FixedUpdate()
@@ -74,7 +75,7 @@ public class Player_Control : MonoBehaviour
 
     }
 
-    void Movement(int pDirection)// Here is the samething in idle
+    public void Movement(int pDirection)// Here is the samething in idle
     {
 		if (!interacting)
 		{
@@ -112,7 +113,12 @@ public class Player_Control : MonoBehaviour
         }		
 	}
 
-    private void OnTriggerStay2D(Collider2D actor)
+    public void UpdateAnimator()//Update all the clothes animator
+	{
+        anim = GetComponentsInChildren<Animator>();
+	}
+
+    private void OnTriggerStay2D(Collider2D actor)//Check if the player is in a actor trigger and if it's facing the actor
     {
         at = actor.GetComponent<Actor_Trigger>();
 

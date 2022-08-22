@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Actor_Trigger : MonoBehaviour
 {
     public Player_Control.Direction direction; //Direction that the player need to face, to interact with the actor
-	Shop shop;
+	Shop shop; //Shop script
 	//Event event;
 	//NPC npc;
 
@@ -19,7 +17,7 @@ public class Actor_Trigger : MonoBehaviour
 
 	private void Start()
 	{
-		switch (behavior)
+		switch (behavior) //This is the trigger to a event/npc/shop just place it in a trigger with the actor script
 		{
 			case Behavior.Shop:
 				shop = GetComponent<Shop>();
@@ -35,7 +33,7 @@ public class Actor_Trigger : MonoBehaviour
 		}		
 	}
 
-	public void StartActorBehavior()
+	public void StartActorBehavior() //All actor will start with the same function: ActorBehavior()
 	{
 		switch (behavior)
 		{
