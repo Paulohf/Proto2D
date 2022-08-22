@@ -8,6 +8,7 @@ TagManager:
   - Shirt
   - Leg
   - Boot
+  - Buy_Panel
   layers:
   - Default
   - TransparentFX
